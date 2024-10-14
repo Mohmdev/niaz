@@ -27,11 +27,9 @@ paths = ['/app/node_modules/.bin']
 
 [phases.build]
 dependsOn = ['install']
-cmds = [
-  'pnpm migrate:run && cross-env NODE_OPTIONS=--no-deprecation next build',
-]
+cmds = ['cross-env NODE_OPTIONS=--no-deprecation next build']
 cacheDirectories = ['.next/cache', 'node_modules/.cache']
 
 
 [start]
-cmd = 'cross-env NODE_OPTIONS=--no-deprecation next start'
+cmd = 'pnpm migrate:run && cross-env NODE_OPTIONS=--no-deprecation next start'
