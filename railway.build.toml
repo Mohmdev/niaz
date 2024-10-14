@@ -32,4 +32,4 @@ cacheDirectories = ['.next/cache', 'node_modules/.cache']
 
 
 [start]
-cmd = 'pnpm migrate:run && cross-env NODE_OPTIONS=--no-deprecation next start'
+cmd = 'cross-env NODE_OPTIONS=--no-deprecation next start'
